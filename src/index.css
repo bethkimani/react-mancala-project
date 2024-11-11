@@ -1,3 +1,346 @@
+<<<<<<< HEAD
+/* Root Variables for Colors */
+:root {
+  --primary-green: #4CAF50;
+  --secondary-green: #45a049;
+  --light-gray: #e8e8e8;
+  --highlight-pink: #f1ae89;
+  --border-green: #9ddfd3;
+  --border-red: #ea2c62;
+  --board-bg: #825959;
+  --pocket-bg: #a07676;
+  --piece-color: yellow;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Home Section */
+.home-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.marquee {
+  background: var(--primary-green);
+  color: white;
+  padding: 10px 0;
+  font-weight: bold;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translate(100%, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.home-title {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.home-description {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-green);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-green);
+}
+
+/* About Page Styles */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.instructions {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Game Board Layout */
+main {
+  height: 500px;
+  width: 1000px;
+}
+
+.board {
+  width: 1000px;
+  height: 500px;
+  background-color: var(--board-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 0 3%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Player and Scoreboard Display */
+.player-one-display,
+.player-two-display {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.player-one-display {
+  border: 5px solid var(--border-green);
+}
+
+.player-two-display {
+  border: 5px solid var(--border-red);
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 125px;
+  margin-bottom: 75px;
+}
+
+#scoreboard-one,
+#scoreboard-two {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#scoreboard-one {
+  border: 5px solid var(--border-green);
+}
+
+#scoreboard-two {
+  border: 5px solid var(--border-red);
+}
+
+#scoreboard-one > p,
+#scoreboard-two > p {
+  font-size: 2.5em;
+}
+
+/* Pocket and Piece Styling */
+.side-one,
+.side-two {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+}
+
+.side-one {
+  border-color: var(--border-green);
+}
+
+.side-two {
+  margin-top: 70px;
+  border-color: var(--border-red);
+}
+
+.side-one > div,
+.side-two > div {
+  width: 15%;
+  height: 100%;
+  background-color: var(--pocket-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+/* Piece Styling */
+.piece {
+  height: 15px;
+  width: 15px;
+  margin: 2.5px;
+  border-radius: 100%;
+  background-color: var(--piece-color);
+}
+
+/* Mancala Bins */
+.mancala-one,
+.mancala-two {
+  margin: 0 2.5%;
+  width: 10%;
+  height: 65%;
+  background-color: var(--pocket-bg);
+  border-radius: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mancala-one {
+  border: 3px solid var(--border-green);
+}
+
+.mancala-two {
+  border: 3px solid var(--border-red);
+}
+
+/* Winner and Play Again Styling */
+.winnerContainerDiv {
+  margin: 50px;
+}
+
+.playAgainDivs {
+  font-size: 2em;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}
+
+#vet-button {
+  margin-top: 10px;
+  border-style: solid;
+  padding: 7px;
+  font-size: 1.3em;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 1.5em;
+  }
+
+  .home-description {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    height: 1300px;
+    overflow: visible;
+  }
+
+  .winnerContainerDiv {
+    position: absolute;
+    top: 385px;
+    left: calc(50% - 250px);
+    z-index: 1;
+    width: 500px;
+    opacity: 90%;
+  }
+
+  .playAgainDivs {
+    width: 150px;
+    height: 150px;
+  }
+
+  .playAgainDivs:nth-child(2n + 2) {
+    width: 200px;
+    height: 150px;
+  }
+
+  #scoreboard {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 250px;
+    margin-top: -28px;
+  }
+
+  #scoreboard > div {
+    width: 500px;
+  }
+
+  #scoreboard-one,
+  #scoreboard-two {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main {
+    transform: rotate(90deg);
+  }
+}
+=======
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,3 +409,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+>>>>>>> 27c0f842e5d2d28950419c1436c1dcf558d907ca
