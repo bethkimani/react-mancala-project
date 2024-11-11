@@ -52,7 +52,7 @@ nav a:hover {
 
 .marquee {
   background: #4a90e2; /* Marquee background color */
-  color: white;
+  color: rgb(55, 38, 57);
   padding: 1rem 0;
   font-size: 1.2rem;
   animation: marquee 10s linear infinite;
@@ -73,7 +73,7 @@ nav a:hover {
 h2 {
   margin: 1rem 0;
   font-size: 2rem;
-  font-family: 'Georgia', serif; /* Different font for the title */
+  font-family: 'Cut Mutiara', sans-serif; /* Apply custom font */
 }
 
 p {

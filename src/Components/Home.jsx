@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <section id="home" className="home-section">
       <div className="marquee">
-        <span>Welcome to the Mancala Game! Gather your friends and family for a fun experience.</span>
+        <span>MANCALA GAME.</span>
       </div>
       <img src="/src/assets/download.jpeg" alt="Mancala Game" className="home-image" />
       <h2>Welcome to Mancala Game!</h2>
