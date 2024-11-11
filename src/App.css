@@ -1,3 +1,12 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +14,110 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header Styles */
+header {
+  background: #4a90e2; /* Header background color */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust font size for better visibility */
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00; /* Highlight color on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Home Section Styles */
+.home-section {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.marquee {
+  background: #4a90e2; /* Marquee background color */
+  color: white;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.home-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-family: 'Georgia', serif; /* Different font for the title */
+}
+
+p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-family: 'Verdana', sans-serif; /* Different font for paragraph */
+}
+
+/* Call to Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffcc00;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ffd700;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav a {
+    margin: 0.5rem 0;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .home-section {
+    padding: 1.5rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  h2 {
+    font-size: 1.8rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
 }
