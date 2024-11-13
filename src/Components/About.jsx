@@ -1,7 +1,7 @@
 // components/About.js
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import mancalaBoard from '../assets/download.jpeg'; // Adjust the path based on where you save the image
+import mancalaBoard from '../assets/download.jpeg';
 import './About.css'; // Import the CSS file
 
 const About = () => {
