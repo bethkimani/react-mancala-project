@@ -1,12 +1,14 @@
 // components/About.js
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import mancalaBoard from '../assets/download.jpeg'; // Adjust the path based on where you save the image
+import './About.css'; // Import the CSS file
 
 const About = () => {
   return (
     <section id="about">
       <h1>About Mancala</h1>
-      <img src="download.jpeg" alt="Mancala Board" />
+      <img src={mancalaBoard} alt="Mancala Board" />
       <p>
         Mancala is a traditional strategy game focused on capturing stones, with roots tracing back to ancient Africa, particularly Ethiopia. 
         This game, believed to be over 3,000 years old, is often regarded as one of the oldest known games in the world. Mancala has no single creator; 
@@ -29,4 +31,3 @@ const About = () => {
 };
 
 export default About;
-
