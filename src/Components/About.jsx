@@ -6,7 +6,11 @@ const About = () => {
     <section id="about">
       <h1>About Mancala</h1>
       <img src="download.jpeg" alt="Mancala Board" />
-      <p>Mancala is a strategic game of capturing stones.</p>
+      <p>
+        Mancala is a traditional strategy game focused on capturing stones, with roots tracing back to ancient Africa, particularly Ethiopia. 
+        This game, believed to be over 3,000 years old, is often regarded as one of the oldest known games in the world. Mancala has no single creator; 
+        instead, it evolved through various cultures and spread across Africa, the Middle East, and later around the globe, adapting in unique ways within different regions.
+      </p>
       <h2>How to play:</h2>
       <ul>
         <li>The game begins with the player selecting a pocket on their side. These pockets are highlighted during your turn.</li>
@@ -24,3 +28,4 @@ const About = () => {
 };
 
 export default About;
+
