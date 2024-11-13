@@ -9,3 +9,5 @@ const Pocket = ({ stones, onClick }) => {
 };
 
 export default Pocket;
+
+
