@@ -1,4 +1,5 @@
 // components/About.js
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
 const About = () => {
@@ -15,13 +16,13 @@ const About = () => {
       <ul>
         <li>The game begins with the player selecting a pocket on their side. These pockets are highlighted during your turn.</li>
         <li>The game moves in a counter-clockwise rotation and deposits 1 stone in each pocket along the way until the stones run out.</li>
-        <li>The game will skip the computer's mancala, only placing your stones in the pockets and your mancala.</li>
+        <li>The game will skip the computer&apos;s mancala, only placing your stones in the pockets and your mancala.</li>
         <li>If the final stone is placed in your mancala, your turn continues and you may select another pocket.</li>
         <li>If the final stone is placed in an empty pocket on your side, it may capture stones in the pocket directly across. The stones in both pockets will go to your mancala.</li>
-        <li>When your turn ends, a "Computer's Play" button will appear. Select this to have the computer make its move.</li>
-        <li>If you would prefer to play with a friend, just have them select a legal pocket during the computer's turn.</li>
+        <li>When your turn ends, a &quot;Computer&apos;s Play&quot; button will appear. Select this to have the computer make its move.</li>
+        <li>If you would prefer to play with a friend, just have them select a legal pocket during the computer&apos;s turn.</li>
         <li>The game ends when either player has collected more than 24 stones.</li>
-        <li>Press the "Play Again!" button if you'd like to try again.</li>
+        <li>Press the &quot;Play Again!&quot; button if you&apos;d like to try again.</li>
       </ul>
     </section>
   );
