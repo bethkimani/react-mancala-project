@@ -1,4 +1,5 @@
-/* Global Styles */
+/* App.css */
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -7,144 +8,86 @@ body {
   padding: 0;
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Header Styles */
 header {
-  position: fixed; /* Fixed positioning for the header */
-  top: 0; /* Stay at the top */
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #4a90e2, #007acc); /* Gradient background */
-  color: white;
-  padding: 1rem 0;
-  min-height: 80px; /* Minimum height for the header */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s;
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center content vertically */
-  z-index: 1000; /* Ensure it stays on top */
-}
-
-header:hover {
-  background: linear-gradient(135deg, #007acc, #4a90e2); /* Reverse gradient on hover */
+  background-color: #4a2f1d;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-grow: 1; /* Allow nav to grow and take available space */
+  gap: 20px;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: color 0.3s, transform 0.3s;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for scale effect */
 }
 
 nav a:hover {
-  color: #ffcc00; /* Highlight color on hover */
-  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #a07a5b;
+  transform: scale(1.05); /* Slightly grow on hover */
 }
 
-/* Home Section Styles */
-.home-section {
-  padding: 2rem;
-  background: white;
+h1, h2, h3 {
+  color: #4a2f1d;
+}
+
+#about {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 100px; /* Increased margin-top to accommodate fixed header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.marquee {
-  background: #4a90e2; /* Marquee background color */
-  color: white;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-  white-space: nowrap; /* Prevent line break */
-  overflow: hidden; /* Hide overflow */
-  box-sizing: border-box; /* Include padding in width */
-  position: relative; /* Position relative for animation */
-  height: 40px; /* Set a fixed height for the marquee */
-}
-
-.marquee-content {
-  display: inline-block;
-  animation: marquee 15s linear infinite; /* Adjusted animation duration */
-  position: absolute; /* Position absolutely within the marquee */
-  will-change: transform; /* Optimization for smoother animation */
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-.home-image {
-  width: 100%;
-  max-width: 300px; /* Reduced max width for smaller display */
-  height: auto; /* Maintain aspect ratio */
+.instructions-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f9f6f2;
   border-radius: 8px;
-  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  margin: 1rem 0;
-  font-size: 2rem;
-  font-family: 'Georgia', serif;
-}
-
-p {
-  margin: 1rem 0;
-  line-height: 1.6;
-  font-family: 'Verdana', sans-serif;
-}
-
-/* Call to Action Button */
-.cta-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ffcc00;
-  color: #333;
-  text-decoration: none;
+.instructions-container img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
   border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
 }
 
-.cta-button:hover {
-  background-color: #ffd700;
-  transform: scale(1.05); /* Slight zoom on hover */
+.pocket {
+  display: inline-block;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #e0b89f;
+  border-radius: 5px;
+  position: relative;
+  transition: background-color 0.3s; /* Added transition for pockets */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
+.pocket:hover {
+  background-color: #d0a57a; /* Darken on hover */
+}
 
-  nav a {
-    margin: 0.5rem 0;
-  }
-
-  .home-section {
-    padding: 1.5rem;
-    margin-top: 80px; /* Adjust if the header height changes */
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .cta-button {
-    padding: 0.5rem 1rem;
-  }
+.piece {
+  width: 10px;
+  height: 10px;
+  background-color: #4a2f1d;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }

@@ -1,4 +1,4 @@
-// Pocket.js
+// Pocket.jsx
 import React from 'react';
 
 function Pocket({ active, pieces }) {
@@ -15,5 +15,3 @@ function Pocket({ active, pieces }) {
 }
 
 export default Pocket;
-
-

@@ -1,3 +1,4 @@
+// Scoreboard.jsx
 import React from 'react';
 
 function Scoreboard({ scoreOne, scoreTwo }) {
