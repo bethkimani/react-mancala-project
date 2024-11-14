@@ -4,29 +4,28 @@ import React from 'react';
 const instructions = [
   {
     text: "The game begins with the player selecting a pocket on their side. These pockets are highlighted during your turn.",
-    img: "https://example.com/image1.jpg" // Replace with actual image links
+    img: require('./assets/step one.jpeg') 
   },
   {
     text: "The game moves in a counter-clockwise rotation and deposits 1 stone in each pocket along the way until the stones run out.",
-    img: "https://example.com/image2.jpg"
+    img: require('./assets/step two.jpeg') 
   },
   {
     text: "If the final stone is placed in an empty pocket on your side, it may capture stones in the pocket directly across.",
-    img: "https://example.com/image3.jpg"
+    img: require('./assets/step three.jpeg') 
   },
   {
     text: "Players take turns picking up all the stones from one of their pockets and distributing them in the following pockets.",
-    img: "https://example.com/image4.jpg"
+    img: require('./assets/step four.jpeg') 
   },
   {
     text: "If a player lands in their own Mancala, they get an extra turn.",
-    img: "https://example.com/image5.jpg"
+    img: require('./assets/step five.jpeg') 
   },
   {
     text: "The game ends when one player has no stones left in their pockets. The other player collects their stones.",
-    img: "https://example.com/image6.jpg"
+    img: require('./assets/step six.jpeg') 
   },
-  // Add more instructions as needed
 ];
 
 const Instructions = () => {
