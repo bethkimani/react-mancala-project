@@ -1,48 +1,64 @@
-// Instructions.jsx
-import React from 'react';
+import React from "react";
+import InstructionCard from "./InstructionCard";
+import image1 from "../assets/image1.jpeg";
+import image2 from "../assets/image2.jpeg";
+import image3 from "../assets/image3.jpeg";
+import image4 from "../assets/image4.jpeg";
+import image5 from "../assets/image5.jpeg";
+import image6 from "../assets/image6.jpeg";
+
 
 const instructions = [
   {
     text: "The game begins with the player selecting a pocket on their side. These pockets are highlighted during your turn.",
-    img: "https://example.com/image1.jpg" // Replace with actual image links
+    img: image1,
   },
   {
     text: "The game moves in a counter-clockwise rotation and deposits 1 stone in each pocket along the way until the stones run out.",
-    img: "https://example.com/image2.jpg"
+    img: image2,
   },
   {
     text: "If the final stone is placed in an empty pocket on your side, it may capture stones in the pocket directly across.",
-    img: "https://example.com/image3.jpg"
+    img: image3,
   },
   {
     text: "Players take turns picking up all the stones from one of their pockets and distributing them in the following pockets.",
-    img: "https://example.com/image4.jpg"
+    img: image4,
   },
   {
     text: "If a player lands in their own Mancala, they get an extra turn.",
-    img: "https://example.com/image5.jpg"
+    img: image5,
   },
   {
     text: "The game ends when one player has no stones left in their pockets. The other player collects their stones.",
-    img: "https://example.com/image6.jpg"
+    img: image6,
   },
-  // Add more instructions as needed
 ];
 
 const Instructions = () => {
   return (
-    <section>
+    <section className="instructions-section">
       <h2>How to Play</h2>
       <p>
-        Mancala is a strategic game that involves capturing stones. Here are the basic rules:
+        Mancala is a strategic game that involves capturing stones. Here are
+        the basic rules:
       </p>
-      {instructions.map((instruction, index) => (
-        <div key={index} className="instructions-container">
-          <p>{instruction.text}</p>
-          <img src={instruction.img} alt={`Instruction ${index + 1}`} />
-        </div>
-      ))}
-      <a href="https://www.youtube.com/watch?v=-A-djjimCcM&t=41s&ab_channel=MissBrain%27sCoolMathVideos">
+      <div className="instructions-grid">
+        {instructions.map((instruction, index) => (
+          <InstructionCard
+            key={index}
+            img={instruction.img}
+            text={instruction.text}
+            number={index + 1}  // Pass the step number directly
+          />
+        ))}
+      </div>
+      <a
+        href="https://www.youtube.com/watch?v=-A-djjimCcM&t=41s&ab_channel=MissBrain%27sCoolMathVideos"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="instruction-link"
+      >
         Watch How To Play
       </a>
     </section>

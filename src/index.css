@@ -55,11 +55,14 @@ body {
   100% { transform: translate(-100%, 0); }
 }
 
+/* Style for the home image */
 .home-image {
-  max-width: 100%;
+  width: 100%; /* Makes the image responsive */
   height: auto;
-  margin: 20px 0;
+  margin-top: 100px; /* Optional, for spacing */
+  border-radius: 100px; /* Optional, for rounded corners */
 }
+
 
 .home-title {
   font-size: 2em;
@@ -84,6 +87,69 @@ body {
 .cta-button:hover {
   background-color: var(--secondary-green);
 }
+
+/* Navigation Bar */
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Vertically center the items */
+  background-color: var(--primary-green); /* Adjust to match your theme */
+  padding: 15px 30px; /* Add padding for better spacing around the navbar */
+}
+
+/* Navigation Links */
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Vertically center the items */
+  background-color: black; /* Black background */
+  padding: 15px 30px; /* Add padding for better spacing around the navbar */
+}
+
+/* Navigation Links */
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centers the links horizontally */
+  align-items: center; /* Vertically centers the items */
+  background-color: black; /* Black background */
+  padding: 15px 30px; /* Padding around the navbar */
+}
+
+/* Navigation Links */
+.navbar a {
+  color: black; /* Text color of the links */
+  text-decoration: none; /* Remove underlines */
+  font-size: 1.2em;
+  margin: 0 20px; /* Space between links */
+  padding: 5px 10px; /* Padding inside the links */
+  display: inline-block; /* Inline blocks for better layout */
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  background-color: #555; /* Slightly lighter shade for hover effect */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Optional: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center the links */
+  }
+
+  .navbar a {
+    margin: 10px 0; /* Add margin for vertical spacing */
+  }
+}
+
+
+
+
 
 /* About Page Styles */
 h1 {
@@ -339,4 +405,48 @@ main {
   main {
     transform: rotate(90deg);
   }
+}
+
+
+
+
+/* INSTRUCTIONS */
+
+/* Example in index.css */
+.instructions-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.instructions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.instruction-card {
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.instruction-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Additional styling for the instructions number circle */
+.number-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #0088cc;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
